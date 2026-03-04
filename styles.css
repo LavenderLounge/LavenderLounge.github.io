@@ -1,20 +1,19 @@
 /* Global Styles */
-body {
-  font-family: 'Poppins', sans-serif;
+html, body {
+  height: 100%; /* Ensure both html and body stretch full height */
   margin: 0;
   padding: 0;
-  background: linear-gradient(135deg, #9c59b6, #6a2c8a); /* Gradient from purple to dark purple */
-  color: #fff;
-  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #9c59b6, #6a2c8a); /* Continuous gradient from purple to dark purple */
+  color: #ffffff; /* White text color for contrast */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: background-color 0.3s, color 0.3s;
 }
 
 h1, h2, h3 {
   font-family: 'Roboto', sans-serif;
-  color: #fff;
+  color: #ffffff; /* Ensure headings are white */
   animation: fadeIn 1s ease-in-out;
 }
 
@@ -25,12 +24,12 @@ a {
 
 /* Light Mode Styles */
 .light-mode {
-  background: linear-gradient(135deg, #9c59b6, #6a2c8a); /* Gradient for light mode */
-  color: #fff;
+  background: linear-gradient(135deg, #9c59b6, #6a2c8a); /* Continuous gradient for light mode */
+  color: #333333; /* Darker text color for light mode for better contrast */
 }
 
 .light-mode header {
-  background-color: #9c59b6;
+  background-color: rgba(156, 89, 182, 0.8); /* Semi-transparent header */
   color: white;
 }
 
@@ -44,7 +43,8 @@ a {
 }
 
 .light-mode .staff-member {
-  background-color: #f4f4f4;
+  background-color: rgba(244, 244, 244, 0.9); /* Semi-transparent background for staff members */
+  color: #333; /* Dark text for light mode */
 }
 
 .light-mode .staff-photo {
@@ -53,12 +53,13 @@ a {
 
 /* Dark Mode Styles */
 .dark-mode {
-  background: linear-gradient(135deg, #6a2c8a, #9c59b6); /* Gradient for dark mode */
-  color: #fff;
+  background: linear-gradient(135deg, #6a2c8a, #9c59b6); /* Continuous gradient for dark mode */
+  color: #f9f9f9; /* Light text color for dark mode for contrast */
 }
 
 .dark-mode header {
-  background-color: #6a2c8a;
+  background-color: rgba(106, 44, 138, 0.8); /* Semi-transparent header */
+  color: white;
 }
 
 .dark-mode .cta-button {
@@ -71,7 +72,8 @@ a {
 }
 
 .dark-mode .staff-member {
-  background-color: #444;
+  background-color: rgba(68, 68, 68, 0.9); /* Semi-transparent background for staff members */
+  color: #f9f9f9; /* Light text for dark mode */
 }
 
 .dark-mode .staff-photo {
@@ -134,8 +136,8 @@ h1, h2, h3, p {
 }
 
 .staff-member img {
-  width: 60px; /* Increased staff photo size to 60px */
-  height: 60px; /* Increased staff photo size to 60px */
+  width: 60px; /* Staff photo size */
+  height: 60px; /* Staff photo size */
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid #9c59b6;
@@ -149,7 +151,7 @@ h1, h2, h3, p {
 
 .staff-member p {
   font-size: 1rem;
-  color: #666;
+  color: #666; /* Darker text color for paragraphs in light mode */
 }
 
 /* Fun Fact Style */
