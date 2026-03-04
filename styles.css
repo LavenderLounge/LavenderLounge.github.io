@@ -3,14 +3,18 @@ body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f9f9f9;
-  color: #333;
+  background: linear-gradient(135deg, #9c59b6, #6a2c8a); /* Gradient from purple to dark purple */
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   transition: background-color 0.3s, color 0.3s;
 }
 
 h1, h2, h3 {
   font-family: 'Roboto', sans-serif;
-  color: #2b2b2b;
+  color: #fff;
   animation: fadeIn 1s ease-in-out;
 }
 
@@ -21,8 +25,8 @@ a {
 
 /* Light Mode Styles */
 .light-mode {
-  background-color: #f9f9f9;
-  color: #333;
+  background: linear-gradient(135deg, #9c59b6, #6a2c8a); /* Gradient for light mode */
+  color: #fff;
 }
 
 .light-mode header {
@@ -49,8 +53,8 @@ a {
 
 /* Dark Mode Styles */
 .dark-mode {
-  background-color: #333;
-  color: #f9f9f9;
+  background: linear-gradient(135deg, #6a2c8a, #9c59b6); /* Gradient for dark mode */
+  color: #fff;
 }
 
 .dark-mode header {
@@ -130,8 +134,8 @@ h1, h2, h3, p {
 }
 
 .staff-member img {
-  width: 40px; /* Set staff photo to 40px */
-  height: 40px; /* Set staff photo to 40px */
+  width: 60px; /* Increased staff photo size to 60px */
+  height: 60px; /* Increased staff photo size to 60px */
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid #9c59b6;
@@ -161,7 +165,7 @@ h1, h2, h3, p {
   right: 20px;
   background-color: transparent;
   border: none;
-  color: #333;
+  color: #fff;
   font-size: 2rem;
   cursor: pointer;
   z-index: 1000;
