@@ -3,9 +3,11 @@ html, body {
   height: 100%; /* Ensure both html and body stretch full height */
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Google Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
   /* background: linear-gradient(135deg, #9c59b6, #6a2c8a); Continuous gradient from purple to dark purple */ 
-  background: linear-gradient(135deg, #6a2c8a, #000000); /* Continuous gradient from purple to dark purple */
+  background: linear-gradient(135deg, #6a2c8a, #000000);
   color: #ffffff; /* White text color for contrast */
   display: flex;
   flex-direction: column;
@@ -13,7 +15,6 @@ html, body {
 }
 
 h1, h2, h3 {
-  font-family: 'Roboto', sans-serif;
   color: #ffffff; /* Ensure headings are white */
   animation: fadeIn 1s ease-in-out;
 }
@@ -88,6 +89,13 @@ h1, h2, h3, p {
   }
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+
+}
+
 /* Button Style */
 .cta-button {
   padding: 15px 25px;
@@ -96,6 +104,7 @@ h1, h2, h3, p {
   margin-top: 20px;
   display: inline-block;
   transition: background-color 0.3s;
+  background-color: #794fd450;
 }
 
 .cta-button:hover {
