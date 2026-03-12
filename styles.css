@@ -7,7 +7,7 @@ html, body {
   font-optical-sizing: auto;
   font-style: normal;
   /* background: linear-gradient(135deg, #9c59b6, #6a2c8a); Continuous gradient from purple to dark purple */ 
-  background: linear-gradient(135deg, #6a2c8a, #000000);
+  background: linear-gradient(135deg, #6a2c8a, #000000) no-repeat fixed; 
   color: #ffffff; /* White text color for contrast */
   display: flex;
   flex-direction: column;
@@ -30,7 +30,7 @@ nav {
 .navContainer {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .navElements {
