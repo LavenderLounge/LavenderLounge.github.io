@@ -1,75 +1,56 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lavender Lounge - FAQ</title>
 
-  <link rel="stylesheet" href="material-theme.css" />
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
+  <link rel="stylesheet" href="material-theme.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="m3e.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet">
+
   <script defer src="script.js"></script>
 </head>
 
 <body>
 
-  <nav>
-    <div class="logo">Lavender Lounge</div>
+  <nav class="m3-surface" style="background:#1a0f2f;">
+    <div class="navContainer">
+      <div class="navElements">
+        <a href="/"><img src="media/icons/home.svg"></a>
+        <a href="faq.html"><img src="media/icons/help.svg"></a>
+        <a href="staff.html"><img src="media/icons/group.svg"></a>
+        <a href="minecraft.html"><img src="media/icons/game.svg"></a>
+        <a href="https://cabbit.zone/"><img src="media/icons/rabbit.svg"></a>
+      </div>
 
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="faq.html">FAQ</a>
-      <a href="staff.html">Staff</a>
-      <a href="minecraft.html">Minecraft</a>
-      <a href="https://cabbit.zone/">Rabbit</a>
+      <button id="theme-toggle" class="icon-button">
+        <span class="material-symbols-rounded">light_mode</span>
+      </button>
     </div>
-
-    <button id="theme-toggle">
-      <span class="material-symbols-rounded">dark_mode</span>
-    </button>
   </nav>
 
-  <section class="container fade-in">
+  <section class="container m3-surface">
     <h1>Frequently Asked Questions</h1>
 
-    <div class="grid grid-2" style="margin-top: 32px;">
+    <h3>What is Lavender Lounge?</h3>
+    <p>Lavender Lounge is a safe and supportive Discord community...</p>
 
-      <div class="card">
-        <h3>What is Lavender Lounge?</h3>
-        <p>
-          Lavender Lounge is a safe and supportive Discord community where people come to unwind, chat, and share experiences.
-        </p>
-      </div>
+    <h3>How big is the server?</h3>
+    <p>Currently, our server is still small and we have about 20 members.</p>
 
-      <div class="card">
-        <h3>How big is the server?</h3>
-        <p>
-          Currently, our server is still small and we have about 20 members.
-        </p>
-      </div>
+    <h3>How do I join the server?</h3>
+    <p>Click below to join! We look forward to having you!</p>
 
-      <div class="card">
-        <h3>How do I join the server?</h3>
-        <p>
-          Click below to join! We look forward to having you!
-        </p>
-      </div>
+    <h3>There is a minecraft server?</h3>
+    <p>Yes! It's being provided by a server member by the name "kevin".</p>
 
-      <div class="card">
-        <h3>There is a minecraft server?</h3>
-        <p>
-          Yes! It's being provided by a server member by the name "kevin".
-        </p>
-      </div>
-
-    </div>
-
-    <a href="https://discord.gg/k8Jx3yT7cm" class="button button-primary" style="margin-top: 32px;">
-      Join us!
-    </a>
+    <a href="https://discord.gg/k8Jx3yT7cm" class="m3-button" style="margin-top:20px;">Join us!</a>
   </section>
 
-  <footer>
+  <footer class="m3-surface">
     <p>© 2026 Lavender Lounge. All rights reserved.</p>
   </footer>
 

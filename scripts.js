@@ -1,10 +1,12 @@
 /* ---------------------------------------------------------
    Lavender Lounge — Material 3 Theme Controller
+   Default: Dark Mode
 --------------------------------------------------------- */
 
 const themeToggle = document.getElementById("theme-toggle");
 const root = document.documentElement;
 
+/* Always start in dark mode */
 function applyTheme(theme) {
   root.setAttribute("data-theme", theme);
   localStorage.setItem("theme", theme);
@@ -19,8 +21,7 @@ function initTheme() {
   const saved = localStorage.getItem("theme");
   if (saved) return applyTheme(saved);
 
-  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  applyTheme(prefersDark ? "dark" : "light");
+  applyTheme("dark");
 }
 
 initTheme();

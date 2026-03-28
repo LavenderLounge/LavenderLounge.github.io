@@ -1,116 +1,107 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lavender Lounge - Staff Team</title>
 
-  <!-- Material 3 theme + your existing styles -->
-  <link href="material-theme.css" rel="stylesheet">
-  <link href="styles.css" rel="stylesheet">
+  <!-- M3E Theme -->
+  <link rel="stylesheet" href="material-theme.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="m3e.css">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Story+Script&display=swap" rel="stylesheet">
-
-  <!-- Material Symbols for theme toggle -->
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet">
 
-  <!-- Existing script + M3E theme script -->
+  <!-- Scripts -->
   <script src="scripts.js"></script>
   <script defer src="script.js"></script>
 </head>
 
 <body>
-  <!-- Navigation Bar -->
-  <nav>
+
+  <!-- NAVIGATION (now identical to all other pages) -->
+  <nav class="m3-surface">
     <div class="navContainer">
       <div class="navElements">
-        <a href="/"><img src="media/icons/home.svg" alt="Home" /></a>
-        <a href="faq.html"><img src="media/icons/help.svg" alt="FAQ" /></a>
-        <a href="staff.html"><img src="media/icons/group.svg" alt="Staff" /></a>
-        <a href="minecraft.html"><img src="media/icons/game.svg" alt="Minecraft" /></a>
-        <a href="https://cabbit.zone/"><img src="media/icons/rabbit.svg" alt="Rabbit"/></a>
+        <a href="/"><img src="media/icons/home.svg" alt="Home"></a>
+        <a href="faq.html"><img src="media/icons/help.svg" alt="FAQ"></a>
+        <a href="staff.html"><img src="media/icons/group.svg" alt="Staff"></a>
+        <a href="minecraft.html"><img src="media/icons/game.svg" alt="Minecraft"></a>
+        <a href="https://cabbit.zone/"><img src="media/icons/rabbit.svg" alt="Rabbit"></a>
       </div>
 
-      <!-- M3E theme toggle -->
       <button id="theme-toggle" class="icon-button">
-        <span class="material-symbols-rounded">dark_mode</span>
+        <span class="material-symbols-rounded">light_mode</span>
       </button>
     </div>
   </nav>
 
-  <header>
+  <header class="m3-surface">
     <div class="container">
       <h1>Meet Our Staff</h1>
       <p>The amazing team behind Lavender Lounge!</p>
     </div>
   </header>
 
-  <section id="staff" class="staff-container">
-    <div class="staff-member">
-      <img src="/media/jess.jpg" alt="Millie" class="staff-photo">
+  <section id="staff" class="staff-container m3-surface">
+
+    <div class="staff-member m3-card">
+      <img src="/media/jess.jpg" alt="Jess" class="staff-photo">
       <h3>Jess</h3>
       <p>Role: Owner</p>
-      <p>Jess is the heart and soul of Lavender Lounge. As the Owner, Jess ensures the community is running
-        smoothly, making key decisions to help the server grow and thrive.</p>
+      <p>Jess is the heart and soul of Lavender Lounge...</p>
       <div class="socialMediaContainer">
-        <a href="https://bsky.app/profile/katnissxd.xyz" target="_blank"><img src="media/icons/sites/bsky.svg" alt="bluesky"></a>
-        <a href="https://youtube.com/@jessbaiomusic" target="_blank"><img src="media/icons/sites/yt.svg" alt="Main YouTube"></a>
-        <a href="https://youtube.com/@JessBaioMusic" target="_blank"><img src="media/icons/sites/yt.svg" alt="Baking YouTube"></a>
-        <a href="https://instagram.com/jessbaiomusic" target="_blank"><img src="media/icons/sites/insta.svg" alt="instagram"></a>
-      </div>  
+        <a href="https://bsky.app/profile/katnissxd.xyz"><img src="media/icons/sites/bsky.svg"></a>
+        <a href="https://youtube.com/@jessbaiomusic"><img src="media/icons/sites/yt.svg"></a>
+        <a href="https://youtube.com/@JessBaioMusic"><img src="media/icons/sites/yt.svg"></a>
+        <a href="https://instagram.com/jessbaiomusic"><img src="media/icons/sites/insta.svg"></a>
+      </div>
       <p><strong>Fun Fact:</strong> Jess and Mimi are married! ❤️</p>
     </div>
 
-    <div class="staff-member">
+    <div class="staff-member m3-card">
       <img src="/media/Mimi.jpg" alt="Mimi" class="staff-photo">
       <h3>Mimi</h3>
       <p>Role: Co-Owner</p>
-      <p>Mimi supports Jess in the leadership role, helping with big decisions, organizing events, and keeping the
-        atmosphere fun and friendly for everyone.</p>
+      <p>Mimi supports Jess in the leadership role...</p>
       <div class="socialMediaContainer">
-        <a href="https://instagram.com/mimiiiwebb" target="_blank"><img src="media/icons/sites/insta.svg" alt="instagram"></a>
-        <a href="https://www.facebook.com/mimiiiwebb/" target="_blank"><img src="media/icons/sites/fb.svg" alt="Facebook"></a>
-        <a href="https://www.tiktok.com/@mimiwebb_" target="_blank"><img src="media/icons/sites/tt.svg" alt="TikTok"></a>
-        <a href="https://www.youtube.com/channel/UCKUa7K2srvoAASkphxrnRgg" target="_blank"><img src="media/icons/sites/yt.svg" alt="YouTube"></a>
-      </div>  
+        <a href="https://instagram.com/mimiiiwebb"><img src="media/icons/sites/insta.svg"></a>
+        <a href="https://facebook.com/mimiiiwebb"><img src="media/icons/sites/fb.svg"></a>
+        <a href="https://tiktok.com/@mimiwebb_"><img src="media/icons/sites/tt.svg"></a>
+        <a href="https://youtube.com/channel/UCKUa7K2srvoAASkphxrnRgg"><img src="media/icons/sites/yt.svg"></a>
+      </div>
       <p><strong>Fun Fact:</strong> Mimi and Jess are married! ❤️</p>
     </div>
 
-    <div class="staff-member">
+    <div class="staff-member m3-card">
       <img src="/media/Nova.jpg" alt="Nova" class="staff-photo">
       <h3>Nova</h3>
       <p>Role: Co-Owner</p>
-      <p>Nova works closely with the team to create new ideas, ensure everything runs smoothly, and provide guidance to
-        members and staff alike.</p>
+      <p>Nova works closely with the team...</p>
       <div class="socialMediaContainer">
-        <a href="https://bsky.app/profile/novamtf.bsky.social" target="_blank"><img src="media/icons/sites/bsky.svg" alt="bluesky"></a>
-      </div>  
+        <a href="https://bsky.app/profile/novamtf.bsky.social"><img src="media/icons/sites/bsky.svg"></a>
+      </div>
     </div>
 
-    <div class="staff-member">
+    <div class="staff-member m3-card">
       <h3>Maxi</h3>
       <p>Role: Admin</p>
-      <p>Maxi keeps everything organized, ensures that events are managed, and helps enforce the rules while maintaining
-        a fun and supportive environment.</p>
+      <p>Maxi keeps everything organized...</p>
     </div>
+
   </section>
 
-  <section class="container">
+  <section class="container m3-surface">
     <h2>Join Our Staff Team!</h2>
-    <p>
-      Interested in becoming a part of our amazing staff team? <br>
-      We are always looking for passionate and dedicated individuals to help us grow and maintain our wonderful community. If you think you have what it takes, click the button below to apply!
-    </p>
-    <a href="https://forms.office.com/r/p1LbWvtWbj" class="cta-button">Apply Now</a>
+    <p>Interested in becoming a part of our amazing staff team?</p>
+    <a href="https://forms.office.com/r/p1LbWvtWbj" class="m3-button">Apply Now</a>
   </section>
 
-  <footer>
-    <p>&copy; 2026 Lavender Lounge. All rights reserved. Social media icons by
-      <a href="https://icons8.com/" style="text-decoration: dashed;">Icons8</a>
-    </p>
+  <footer class="m3-surface">
+    <p>© 2026 Lavender Lounge. All rights reserved.</p>
   </footer>
 
 </body>

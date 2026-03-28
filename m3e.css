@@ -1,0 +1,62 @@
+/* ---------------------------------------------------------
+   Lavender Lounge — Material 3 Expressive Add‑On
+   Enhances your existing design WITHOUT changing layout
+--------------------------------------------------------- */
+
+:root {
+  --m3-transition: 180ms cubic-bezier(0.2, 0, 0, 1);
+}
+
+.m3-surface {
+  background: var(--surface);
+  color: var(--on-surface);
+  transition: background var(--m3-transition), color var(--m3-transition);
+}
+
+/* Elevated cards */
+.m3-card {
+  background: var(--surface-bright);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 6px 20px var(--shadow);
+  border: 1px solid var(--outline-variant);
+  transition: box-shadow var(--m3-transition), transform var(--m3-transition);
+}
+
+.m3-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px var(--shadow);
+}
+
+/* Buttons */
+.m3-button {
+  background: var(--primary);
+  color: var(--on-primary);
+  padding: 12px 24px;
+  border-radius: 999px;
+  display: inline-block;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 12px var(--shadow);
+  transition: transform var(--m3-transition), box-shadow var(--m3-transition);
+}
+
+.m3-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px var(--shadow);
+}
+
+/* Theme toggle */
+.icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  color: var(--on-surface);
+  transition: background var(--m3-transition);
+}
+
+.icon-button:hover {
+  background: color-mix(in srgb, var(--primary) 20%, transparent);
+}
