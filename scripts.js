@@ -1,35 +1,31 @@
-// Get the mode toggle button
-const modeToggle = document.getElementById("mode-toggle");
+/* ---------------------------------------------------------
+   Lavender Lounge — Material 3 Theme Controller
+--------------------------------------------------------- */
 
-// Check localStorage for saved mode
-const savedMode = localStorage.getItem("theme");
+const themeToggle = document.getElementById("theme-toggle");
+const root = document.documentElement;
 
-// the use of innerHTML here should be safe since we dont take user input
+function applyTheme(theme) {
+  root.setAttribute("data-theme", theme);
+  localStorage.setItem("theme", theme);
 
-// TODO: fix the bug where it only switches after user
-// clicks twice on initial load
-
-// Apply the saved mode if exists
-if (savedMode) {
-  document.body.classList.add(savedMode);
-  modeToggle.innerHTML = savedMode === "light-mode" ? "" : "<img src=\"media/dark.svg\" />";
-} else {
-  // Default to light mode if no saved mode
-  document.body.classList.add("light-mode");
-  modeToggle.innerHTML = "<img src=\"media/dark.svg\" />";
+  themeToggle.innerHTML =
+    theme === "dark"
+      ? `<span class="material-symbols-rounded">light_mode</span>`
+      : `<span class="material-symbols-rounded">dark_mode</span>`;
 }
 
-// Toggle between light and dark mode
-modeToggle.addEventListener("click", () => {
-  if (document.body.classList.contains("light-mode")) {
-    document.body.classList.remove("light-mode");
-    document.body.classList.add("dark-mode");
-    modeToggle.innerHTML = "<img src=\"media/dark.svg\" />";
-    localStorage.setItem("theme", "dark-mode"); // Save the preference
-  } else {
-    document.body.classList.remove("dark-mode");
-    document.body.classList.add("light-mode");
-    modeToggle.innerHTML = "<img src=\"media/light.svg\" />";
-    localStorage.setItem("theme", "light-mode"); // Save the preference
-  }
+function initTheme() {
+  const saved = localStorage.getItem("theme");
+  if (saved) return applyTheme(saved);
+
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  applyTheme(prefersDark ? "dark" : "light");
+}
+
+initTheme();
+
+themeToggle.addEventListener("click", () => {
+  const current = root.getAttribute("data-theme");
+  applyTheme(current === "dark" ? "light" : "dark");
 });
