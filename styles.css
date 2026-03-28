@@ -1,190 +1,204 @@
-/* Global Styles */
-html, body {
-  height: 100%; /* Ensure both html and body stretch full height */
+/* ---------------------------------------------------------
+   Lavender Lounge — Material 3 Expressive Layout + Components
+--------------------------------------------------------- */
+
+* {
   margin: 0;
   padding: 0;
-  font-family: "Google Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-  /* background: linear-gradient(135deg, #9c59b6, #6a2c8a); Continuous gradient from purple to dark purple */ 
-  background: linear-gradient(135deg, #6a2c8a, #000000) no-repeat fixed;
-  color: #ffffff; /* White text color for contrast */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  box-sizing: border-box;
+  transition:
+    background-color var(--motion-short),
+    color var(--motion-short),
+    border-color var(--motion-short),
+    box-shadow var(--motion-short),
+    transform var(--motion-short);
 }
 
-h1, h2, h3 {
-  color: #ffffff; /* Ensure headings are white */
-  animation: fadeIn 1s ease-in-out;
-}
-
-nav {
-    z-index: 999;
-    position: sticky;
-    top: 10px;
-    border: 2px transparent;
-    transition: 0.2s ease-in-out;
-}
-
-.navContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.navElements {
-    text-align: right;
-    left: auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    padding-right: 20px;
-    padding-top: 10px;
-}
-
-nav p {
-    margin: 0;
-    padding: 0;
-}
-nav h1 {
-    margin: 4px;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-  margin: 4px;
-  cursor: pointer;
-}
-
-/* 
-  * light and dark mode toggles have been removed for now
-  * because they were causing too many issues.
-  * i will revamp the system later when i have time and readd them
-  * for now, the site will be fixed dark mode
-  * sorry :(
-*/
-
-/* Animations */
-h1, h2, h3, p {
-  animation: fadeIn 1s ease-in-out;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes slideIn {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(0);
-  }
+html, body {
+  height: 100%;
+  font-family: var(--font-body);
+  background: var(--surface);
+  color: var(--on-surface);
+  overflow-x: hidden;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-
+  padding: 32px 20px;
 }
 
-/* Button Style */
-.cta-button {
-  padding: 15px 25px;
-  border-radius: 5px;
-  font-size: 16px;
-  font-family: "Story Script", sans-serif;
-  margin-top: 20px;
-  display: inline-block;
-  transition: background-color 0.3s;
-  background-color: #794fd450;
-}
-.cta-button:hover {
-  background-color: #7a4fd4;
-}
+/* NAVIGATION */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  backdrop-filter: blur(18px);
+  background: color-mix(in srgb, var(--surface) 80%, transparent);
+  border-bottom: 1px solid var(--outline-variant);
+  padding: 12px 24px;
 
-/* Staff Photos */
-.staff-container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+nav .nav-links {
+  display: flex;
   gap: 20px;
 }
 
-.staff-member {
-  width: 200px;
+nav a {
+  text-decoration: none;
+  color: var(--on-surface);
+  font-weight: 500;
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  background: var(--primary);
+  border-radius: var(--radius-full);
+  transition: width var(--motion-short);
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+#theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: var(--radius-full);
+  color: var(--on-surface);
+  font-size: 1.6rem;
+}
+
+#theme-toggle:hover {
+  background: color-mix(in srgb, var(--primary) 20%, transparent);
+}
+
+/* HERO */
+.hero {
+  padding: 100px 20px;
   text-align: center;
-  animation: slideIn 1s ease-out;
-  background: linear-gradient(135deg, #9c53c0, #311e3a); /* this looks ugly as shit but idc rn */
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: var(--radius-large);
+  margin: 40px auto;
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--primary) 40%, transparent),
+    color-mix(in srgb, var(--secondary) 40%, transparent)
+  );
+  color: var(--on-primary-container);
+  box-shadow: 0 20px 40px var(--shadow);
+}
+
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: 3.2rem;
+  margin-bottom: 12px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* BUTTONS */
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.button-primary {
+  background: var(--primary);
+  color: var(--on-primary);
+  box-shadow: 0 4px 12px var(--shadow);
+}
+
+.button-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px var(--shadow);
+}
+
+/* CARDS */
+.card {
+  background: var(--surface-bright);
+  border-radius: var(--radius-large);
+  padding: 24px;
+  box-shadow: 0 6px 20px var(--shadow);
+  border: 1px solid var(--outline-variant);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px var(--shadow);
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  gap: 24px;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+/* STAFF */
+.staff-member {
+  text-align: center;
 }
 
 .staff-member img {
-  width: 60px; /* Staff photo size */
-  height: 60px; /* Staff photo size */
-  border-radius: 50%;
+  width: 160px;
+  height: 160px;
   object-fit: cover;
-  border: 3px solid #9c59b6;
-  margin-bottom: 15px;
+  border-radius: var(--radius-full);
+  margin-bottom: 12px;
+  border: 3px solid var(--primary);
 }
 
-.staff-member h3 {
-  font-size: 1.2rem;
-  margin-top: 10px;
+/* FOOTER */
+footer {
+  margin-top: 60px;
+  padding: 40px 20px;
+  text-align: center;
+  background: var(--surface-dim);
+  border-top: 1px solid var(--outline-variant);
+  color: var(--on-surface);
 }
 
-.staff-member p {
-  font-size: 1rem;
-  color: #e8e8e8; /* Darker text color for paragraphs in light mode */
+/* ANIMATIONS */
+.fade-in {
+  animation: fadeIn 0.8s ease-out both;
 }
 
-/* Fun Fact Style */
-.staff-member p strong {
-  font-weight: 600;
-  color: #9c59b6;
-}
-
-/* Mode Toggle Button
-.mode-toggle {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background-color: transparent;
-  border: none;
-  color: #fff;
-  font-size: 2rem;
-  cursor: pointer;
-  z-index: 1000;
-  transition: color 0.3s ease-in-out;
-}
- */
-
-.mode-toggle:hover {
-  color: #9c59b6;
-}
-
-.socialMediaContainer {
-  img {
-    width: auto;
-    height: auto;
-    border: none;
-    border-radius: 0;
-    box-shadow: none;
-    margin: 0;
-    padding: 0;
-    object-fit: unset;
-  }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }

@@ -1,82 +1,49 @@
 <!DOCTYPE html>
-<style>
-    /* applies the minecraft font ™ mojang pls don't hurt us */
-    @font-face {
-        font-family: mojangles;
-        src: url("/media/fonts/Mojang-Regular.ttf");
-    }
-
-    html, body {
-        font-family: mojangles !important;
-    }
-</style>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lavender Lounge - Home</title>
-    <link href="styles.css" rel="stylesheet">
-    <script src="scripts.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Story+Script&display=swap" rel="stylesheet">
-</head>
-<body class="light-mode">
-    <!-- í'm readening the comment in styles.css at line 61
-    yeouwch -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lavender Lounge - Minecraft</title>
 
-    <!-- Navigation Bar -->
-    <nav>
-        <div class="navContainer">
-            <div class="navElements">
-                <a href="/"><img src="media/icons/home.svg" alt="Home" /></a>
-                <a href="faq.html"><img src="media/icons/help.svg" alt="FAQ" /></a>
-                <a href="staff.html"><img src="media/icons/group.svg" alt="Staff" /></a>
-                <a href="minecraft.html"><img src="media/icons/game.svg" alt="Minecraft" /></a>
-                <a href="https://cabbit.zone/"><img src="media/icons/rabbit.svg" alt="Rabbit"/></a>
-            </div>
-        </div>
-    </nav>
-    <div class="container">
-        <section>
-            <img src="media/lavenderloungelogo.webp" alt="LavenderLoungeLogo" style="width: 128px; clip-path: circle(50%);"/>
-            <h1>LavenderSMP</h1>
-            <p>
-                Our wholesome server is not just any common SMP.
-                <br>
-                It allows building, shopping, trading, combat and much more!
-                <br>
-                It is compatible with both Java and Bedrock
-                <br>
-                <br>
-                It is completely open to join through the following details:
-                <br>
-                <br>
-                IP: play.lavenderlounge.xyz for java
-                <br>
-                Bedrock: Add the account "LavenderSMP" and join it, or enter 'play.lavenderlounge.xyz' for the IP (with the default port 19132)
-                <br>
-                A port for Java is not necessary, however the default should be 25565
-                <br>
-                You can play on any of the versions between; Java: 1.8 - 1.21.11 and Bedrock: 1.21.111 - 26.3
-                <br>
-                <br>
-                With all of that out of the way, we welcome you in open arms to your new Minecraft home!
-            </p>
-        </section>
-        <section style="padding-top: 10px;">
-            <h3 style="font-weight: normal;">Interested in helping us realize our server?</h3>
-            <p>
-                Come along and join our staff team for the SMP!
-                <br>
-                We'd love to accept more helping hands
-            </p>
-            <a href="https://forms.office.com/r/aVp8txYqR2" class="cta-button">Apply for staff</a>
-        </section>
+  <link rel="stylesheet" href="material-theme.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+
+  <nav>
+    <div class="logo">Lavender Lounge</div>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="faq.html">FAQ</a>
+      <a href="staff.html">Staff</a>
+      <a href="minecraft.html">Minecraft</a>
+      <a href="https://cabbit.zone/">Rabbit</a>
     </div>
-    <footer>
-        <p>&copy; 2026 Lavender Lounge. All rights reserved.</p>
-    </footer>
+
+    <button id="theme-toggle">
+      <span class="material-symbols-rounded">dark_mode</span>
+    </button>
+  </nav>
+
+  <section class="container fade-in">
+    <h1>Minecraft Server</h1>
+
+    <p>
+      Yes! We have a Minecraft server provided by a member named "kevin".
+    </p>
+
+    <p style="margin-top: 20px;">
+      IP: <strong>play.lavenderlounge.xyz</strong>
+    </p>
+  </section>
+
+  <footer>
+    <p>© 2026 Lavender Lounge. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>

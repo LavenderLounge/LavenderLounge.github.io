@@ -1,49 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lavender Lounge - Home</title>
-  <link href="styles.css" rel="stylesheet">
-  <link rel="icon" type="image" href="/media/lavenderloungelogo.ico">
-  <script src="scripts.js"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Story+Script&display=swap" rel="stylesheet">
-</head>
-<body class="light-mode">
-  <!-- read the comment in styles.css
-  <button id="mode-toggle" class="mode-toggle"><img src="media/dark.svg"/></button>
-  -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lavender Lounge</title>
 
-  <!-- Navigation Bar -->
+  <link rel="stylesheet" href="material-theme.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+
   <nav>
-    <div class="navContainer">
-        <div class="navElements">
-            <a href="/"><img src="media/icons/home.svg" alt="Home" /></a>
-            <a href="faq.html"><img src="media/icons/help.svg" alt="FAQ" /></a>
-            <a href="staff.html"><img src="media/icons/group.svg" alt="Staff" /></a>
-            <a href="minecraft.html"><img src="media/icons/game.svg" alt="Minecraft" /></a>
-            <a href="https://cabbit.zone/"><img src="media/icons/rabbit.svg" alt="Rabbit"/></a>
-        </div>
+    <div class="logo">Lavender Lounge</div>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="faq.html">FAQ</a>
+      <a href="staff.html">Staff</a>
+      <a href="minecraft.html">Minecraft</a>
+      <a href="https://cabbit.zone/">Rabbit</a>
     </div>
+
+    <button id="theme-toggle">
+      <span class="material-symbols-rounded">dark_mode</span>
+    </button>
   </nav>
-    <div class="container">
-      <section>
-      <h1>Welcome to Lavender Lounge</h1>
-      <p>Your safe space for fun, gaming, music, and more!</p>
-      <p>Click the button below to get your invite!</p>
-        <a href="https://discord.gg/k8Jx3yT7cm" class="cta-button">Join us!</a>
-      </section>
-      <section id="about">
-        <h2>About Lavender Lounge</h2>
-        <p>We are a welcoming and inclusive Discord community where everyone can feel at home. Join us for gaming, music, art, and positive discussions.</p>
-      </section>
-    </div>
+
+  <section class="hero fade-in">
+    <h1>Lavender Lounge</h1>
+    <p>A safe and supportive Discord community.</p>
+  </section>
+
+  <section class="container fade-in">
+    <h2>Welcome</h2>
+    <p>
+      Welcome to Lavender Lounge! We are a small but growing community of about 20 members.
+      Whether you're here to chat, relax, or make new friends, we’re happy to have you.
+    </p>
+
+    <a href="https://discord.gg/k8Jx3yT7cm" class="button button-primary" style="margin-top: 20px;">
+      Join our Discord
+    </a>
+  </section>
 
   <footer>
-    <p>&copy; 2026 Lavender Lounge. All rights reserved.</p>
+    <p>© 2026 Lavender Lounge. All rights reserved.</p>
   </footer>
+
 </body>
 </html>

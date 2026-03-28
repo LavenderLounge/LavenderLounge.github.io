@@ -1,0 +1,37 @@
+/* ---------------------------------------------------------
+   Lavender Lounge — Material 3 Expressive Theme Tokens
+   Light Mode: Soft Lavender Light
+   Dark Mode: Velvet Noir Dark
+--------------------------------------------------------- */
+
+:root {
+  color-scheme: light;
+
+  --primary: #9b7bd4;
+  --on-primary: #ffffff;
+  --primary-container: #e9ddff;
+  --on-primary-container: #2a1b3d;
+
+  --secondary: #6d4fa3;
+  --on-secondary: #ffffff;
+  --secondary-container: #f0e6ff;
+  --on-secondary-container: #2d1b47;
+
+  --tertiary: #f7c7d9;
+  --on-tertiary: #3a0f1f;
+
+  --surface: #faf7ff;
+  --surface-dim: #f1eaff;
+  --surface-bright: #ffffff;
+  --on-surface: #2a1b3d;
+
+  --outline: #c9b6e8;
+  --outline-variant: #e4d8f7;
+
+  --shadow: rgba(0, 0, 0, 0.18);
+
+  --font-display: "Roboto Flex", system-ui, sans-serif;
+  --font-body: "Roboto Flex", system-ui, sans-serif;
+
+  --radius-small: 8px;
+  --radius-medium: 16
