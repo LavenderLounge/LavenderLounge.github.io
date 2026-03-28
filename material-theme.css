@@ -1,37 +1,49 @@
 /* ---------------------------------------------------------
    Lavender Lounge — Material 3 Expressive Theme Tokens
-   Light Mode: Soft Lavender Light
-   Dark Mode: Velvet Noir Dark
+   Default Theme: Dark (Royal Purple)
 --------------------------------------------------------- */
 
 :root {
-  color-scheme: light;
+  color-scheme: dark;
 
-  --primary: #9b7bd4;
-  --on-primary: #ffffff;
-  --primary-container: #e9ddff;
-  --on-primary-container: #2a1b3d;
+  /* Royal Purple Primary */
+  --primary: #c7a4ff;
+  --on-primary: #1a0f2f;
+  --primary-container: #3b1a5a;
+  --on-primary-container: #f5ecff;
 
-  --secondary: #6d4fa3;
-  --on-secondary: #ffffff;
-  --secondary-container: #f0e6ff;
-  --on-secondary-container: #2d1b47;
+  /* Secondary Lavender */
+  --secondary: #b38cff;
+  --on-secondary: #1a0f2f;
+  --secondary-container: #2e1747;
+  --on-secondary-container: #f5ecff;
 
-  --tertiary: #f7c7d9;
-  --on-tertiary: #3a0f1f;
+  /* Pink Accent */
+  --tertiary: #f3a9d6;
+  --on-tertiary: #2a0a16;
 
-  --surface: #faf7ff;
-  --surface-dim: #f1eaff;
-  --surface-bright: #ffffff;
-  --on-surface: #2a1b3d;
+  /* Royal Purple Surfaces */
+  --surface: #1a0f2f;
+  --surface-dim: #140a24;
+  --surface-bright: #24133d;
+  --on-surface: #f5ecff;
 
-  --outline: #c9b6e8;
-  --outline-variant: #e4d8f7;
+  /* Outlines */
+  --outline: #6a4f8f;
+  --outline-variant: #3d2b57;
 
-  --shadow: rgba(0, 0, 0, 0.18);
+  /* Shadows */
+  --shadow: rgba(0, 0, 0, 0.7);
 
+  /* Fonts */
   --font-display: "Roboto Flex", system-ui, sans-serif;
   --font-body: "Roboto Flex", system-ui, sans-serif;
 
+  /* Radii */
   --radius-small: 8px;
-  --radius-medium: 16
+  --radius-medium: 16px;
+  --radius-large: 28px;
+  --radius-full: 999px;
+
+  --motion-short: 160ms cubic-bezier(0.2, 0, 0, 1);
+}
